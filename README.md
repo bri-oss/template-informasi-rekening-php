@@ -2,7 +2,7 @@
 
 This is a simple template for Informasi Rekening SNAP BI using PHP.
 
-- [Documentation](https://developers.bri.co.id/id/snap-bi/api-bank-statement-snap-bi)
+- [Documentation](https://developers.bri.co.id/id/snap-bi/apidocs-balance-inquiry-snap-bi)
 
 ## How to Setup Project 🚀
 ```bash
