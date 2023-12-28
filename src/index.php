@@ -20,4 +20,4 @@ $accessTokenPath = '/snap/v1.0/access-token/b2b'; //access token path
 $account = '111231271284142'; // account number
 $partnerId = ''; //partner id
 
-echo "\nResult: "(new Balance())->inquiry($account, $clientId, $clientSecret, $pKeyId, $partnerId, $baseUrl, $path, $accessTokenPath);
+echo "\nResult: " . (new Balance())->inquiry($account, $clientId, $clientSecret, $pKeyId, $partnerId, $baseUrl, $path, $accessTokenPath);
