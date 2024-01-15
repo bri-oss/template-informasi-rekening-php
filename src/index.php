@@ -5,6 +5,9 @@ require __DIR__ . '/../vendor/autoload.php';
 Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/..' . '')->load();
 
 use BRI\Balance\Balance;
+use BRI\Token\AccessToken;
+use BRI\Util\RandomNumber;
+use BRI\Signature\Signature;
 
 // env values
 $clientId = $_SERVER['BRI_CLIENT_KEY']; // customer key
@@ -19,5 +22,21 @@ $accessTokenPath = '/snap/v1.0/access-token/b2b'; //access token path
 // change variables accordingly
 $account = '111231271284142'; // account number
 $partnerId = ''; //partner id
+$channelId = ''; // channel id
 
-echo "\nResult: " . (new Balance())->inquiry($account, $clientId, $clientSecret, $pKeyId, $partnerId, $baseUrl, $path, $accessTokenPath);
+//external id
+$externalId = (new RandomNumber())->generateRandomNumber(9);;
+
+//timestamp
+$timestamp = (new DateTime('now', new DateTimeZone('Asia/Jakarta')))->format('Y-m-d\TH:i:s.000P');
+
+//access token
+$accessToken = (new AccessToken(new Signature()))->getAccessToken(
+  $clientId,
+  $pKeyId,
+  $timestamp,
+  $baseUrl,
+  $accessTokenPath,
+);
+
+echo (new Balance())->inquiry($account, $clientSecret, $partnerId, $baseUrl, $path, $accessToken, $channelId, $externalId, $timestamp);
