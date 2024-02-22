@@ -1,4 +1,4 @@
-# Account-Statement-PHP-Template
+# Account-Information-PHP-Template
 
 This is a simple template for Informasi Rekening SNAP BI using PHP.
 
