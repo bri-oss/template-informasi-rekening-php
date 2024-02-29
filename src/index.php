@@ -6,9 +6,10 @@ require __DIR__ . '/../vendor/autoload.php';
 Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/..' . '')->load();
 
 require __DIR__ . '/../briapi-sdk/autoload.php';
+
 use BRI\Balance\Balance;
 use BRI\Token\AccessToken;
-use BRI\Util\RandomNumber;
+use BRI\Util\VarNumber;
 use BRI\Signature\Signature;
 
 // env values
@@ -27,7 +28,7 @@ $partnerId = ''; //partner id
 $channelId = ''; // channel id
 
 //external id
-$externalId = (new RandomNumber())->generateRandomNumber(9);
+$externalId = (new VarNumber())->generateVar(9);
 
 // fetches a new access token every specified minute with a maximum of 15 minutes
 $minutes = 15;
