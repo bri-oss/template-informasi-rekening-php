@@ -4,8 +4,15 @@ This is a simple template for Informasi Rekening SNAP BI using PHP.
 
 - [Documentation](https://developers.bri.co.id/id/snap-bi/apidocs-balance-inquiry-snap-bi)
 
-## How to Setup Project 🚀
+## List of Content
+- [How to Setup Project](#how-to-setup-project-rocket)
+- [How to get CONSUMER_KEY and CONSUMER_SECRET](#how-to-get-consumer_key-and-consumer_secret)
+- [How to get Private Key](#how-to-get-private-key)
+- [.ENV Example](#env-example)
+- [Caution](#caution)
+- [Disclaimer](#disclaimer)
 
+## How to Setup Project 🚀
 1. run command `cd template-informasi-rekening-php` to change directory
 2. copy .env file by typing 'cp .env.example .env' in the terminal
 3. fill the .env file with the required values
