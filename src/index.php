@@ -5,7 +5,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 Dotenv\Dotenv::createUnsafeImmutable(__DIR__ . '/..' . '')->load();
 
-require __DIR__ . '/../briapi-sdk/autoload.php';
+require __DIR__ . '/../../briapi-sdk/autoload.php';
 
 use BRI\Balance\Balance;
 use BRI\Token\AccessToken;
@@ -23,7 +23,7 @@ $path = '/snap/v1.0/balance-inquiry'; //informasi rekening api path
 $accessTokenPath = '/snap/v1.0/access-token/b2b'; //access token path
 
 // change variables accordingly
-$account = '111231271284142'; // account number
+$account = ''; // account number
 $partnerId = ''; //partner id
 $channelId = ''; // channel id
 
